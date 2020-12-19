@@ -1,4 +1,4 @@
-package com.example.myapplication
+package com.example.getexternalfile
 
 import android.content.Intent
 import android.net.Uri
@@ -20,8 +20,8 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val textView = findViewById<TextView>(R.id.button)
-        textView.setOnClickListener {
+        val button = findViewById<TextView>(R.id.button)
+        button.setOnClickListener {
             Toast.makeText(this, "click", Toast.LENGTH_SHORT).show();
             val intent = Intent(Intent.ACTION_GET_CONTENT)
             intent.type = "*/*"
